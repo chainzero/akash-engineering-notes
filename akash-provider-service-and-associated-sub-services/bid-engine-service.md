@@ -24,7 +24,7 @@
 
 ### 2). BidEngine Calls/Initiates an Event Bus to Monitor New Orders
 
-The `NewService` function called from `provider/bidengine/service.go` checks for existing orders and subscribes to a RPC node event bus for new order processing.
+The `NewService` function called from `provider/blob/main/bidengine/service.go` checks for existing orders and subscribes to a RPC node event bus for new order processing.
 
 Eventually the `run` method in this package is called with a service type passed in.
 
