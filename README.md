@@ -6,10 +6,10 @@ Our focus in this section centers on foundational elements of the Akash Provider
 
 The following Akash Provider services are explored:
 
-* Akash Provider Service
-* Bid Engine Service
-* Cluster Service
-* Manifest Service
+* [Akash Provider Service](./#1-.-akash-provider-service-initiated-via-provider-services-run-command)
+* [Cluster Service](./#cluster-service)
+* [Bid Engine Service](./#bidengine-service)
+* [Manifest Service](./#manifest-service)
 
 ## Visualization
 
@@ -19,7 +19,7 @@ The following Akash Provider services are explored:
 
 ## Code Review
 
-### 1). Provider Service Started via "provider-services run" Command
+### 1). Akash Provider Service Initiated via "provider-services run" Command
 
 The Akash Provider command is registered via Cobra allowing initiation of the provider service via provider-services run via the Akash CLI.
 
@@ -77,7 +77,9 @@ The `NewService` function calls several subordinate `NewService` functions to in
 
 Sub-services are expanded upon in their own, individual sections.  Access these per sub-service sections via available hyperlinks.
 
-* **Cluster Service**
+#### **Cluster Service**
+
+* The code snippet below reveals the call of the `.cluster.NewService` method.  A through review of this Cluster NewService method and associated logic is found in this [section](akash-provider-service-and-associated-sub-services/cluster-service.md).
 
 ```
 	cluster, err := cluster.NewService(ctx, session, bus, cclient, ipOperatorClient, waiter, clusterConfig)
@@ -88,7 +90,9 @@ Sub-services are expanded upon in their own, individual sections.  Access these 
 	}
 ```
 
-* **BidEngine Service**
+#### **BidEngine Service**
+
+The code snippet below reveals the call of the .bidEngine.NewService method. A through review of the Bidengine NewService method and associated logic is found in this [section](akash-provider-service-and-associated-sub-services/bid-engine-service.md).
 
 ```
 	bidengine, err := bidengine.NewService(ctx, session, cluster, bus, waiter, bidengine.Config{
@@ -100,7 +104,9 @@ Sub-services are expanded upon in their own, individual sections.  Access these 
 	})
 ```
 
-* **Manifest Service**
+#### **Manifest Service**
+
+The code snippet below reveals the call of the .manifest.NewService method. A through review of the Manifest NewService method and associated logic is found in this [section](akash-provider-service-and-associated-sub-services/manifest-service.md).
 
 ```
 	manifest, err := manifest.NewService(ctx, session, bus, cluster.HostnameService(), manifestConfig)
