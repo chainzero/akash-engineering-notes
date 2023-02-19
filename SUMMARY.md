@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Akash Provider Service and Associated Sub Services](README.md)
+  * [Bid Engine Overview](akash-provider-service-and-associated-sub-services/bid-engine-overview.md)
   * [Bid Engine Service](akash-provider-service-and-associated-sub-services/bid-engine-service.md)
   * [Cluster Service](akash-provider-service-and-associated-sub-services/cluster-service.md)
   * [Manifest Service](akash-provider-service-and-associated-sub-services/manifest-service.md)
