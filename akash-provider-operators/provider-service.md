@@ -102,7 +102,7 @@ If the `enableIPOperator` is `true` an `ipOperatorClient` session is opened to a
 
 #### 5). Interaction with Kubernetes Customer Controller - Hostname Operator
 
-Within a dedicated document in this section the [Akash Hostname Operator](akash-operator-overview/hostname-operator-for-ingress-controller.md) - a Kubernetes custom controller implementation - code is covered in detail.  In this document the interaction with the Hostname Operator from the Akash Provider service is covered.
+Within a dedicated document in this section the [Akash Hostname Operator](akash-operator-overview/hostname-operator-for-ingress-controller/) - a Kubernetes custom controller implementation - code is covered in detail.  In this document the interaction with the Hostname Operator from the Akash Provider service is covered.
 
 Cobra command flag declaration includes the following definition which allows the basic enablement of IP Leases when `provider-services run` is executed during Provider creation.
 

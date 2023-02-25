@@ -10,6 +10,7 @@
 * [Akash Provider Operators](akash-provider-operators/README.md)
   * [Provider Service](akash-provider-operators/provider-service.md)
   * [Akash Operator Overview](akash-provider-operators/akash-operator-overview/README.md)
-    * [Hostname Operator for Ingress Controller](akash-provider-operators/akash-operator-overview/hostname-operator-for-ingress-controller.md)
+    * [Hostname Operator for Ingress Controller](akash-provider-operators/akash-operator-overview/hostname-operator-for-ingress-controller/README.md)
+      * [Hostname Controller Deep Dive](akash-provider-operators/akash-operator-overview/hostname-operator-for-ingress-controller/hostname-controller-deep-dive.md)
     * [IP Operator for IP Leases](akash-provider-operators/akash-operator-overview/ip-operator-for-ip-leases.md)
     * [Inventory Operator for Persistent Storage](akash-provider-operators/akash-operator-overview/inventory-operator-for-persistent-storage.md)
