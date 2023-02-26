@@ -20,7 +20,7 @@ The Akash code base uses [code-generator ](https://github.com/kubernetes/code-ge
 
 ## Akash Provider Operators
 
-* [Hostname Operator](hostname-operator-for-ingress-controller/)
+* [Hostname Operator](hostname-operator-for-ingress-controller.md)
 * [IP Operator](ip-operator-for-ip-leases.md)
 * [Inventory Operator](inventory-operator-for-persistent-storage.md)
 

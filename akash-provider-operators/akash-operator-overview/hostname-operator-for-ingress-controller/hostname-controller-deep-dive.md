@@ -62,6 +62,8 @@ The `monitorUntilError` method calls the `GetHostnameDeploymentConnections` - lo
 
 The Ingress Controller entries are stored in the `connections` variable which is ranged/looped through and added to the `hostnameOperator` struct map of hostnames.  Future deployments will have their hostname added to the complete, current map when new `providerhost` custom resources are created.
 
+The map of hostnames will be used in downstream logic to determine if an ingress controller entry needs to be created for a `providerhost` custom resource or if the entry already exists and can then be updated or deemed no add/update necessary.
+
 ```
 func (op *hostnameOperator) monitorUntilError(parentCtx context.Context) error {
 	....
@@ -138,11 +140,11 @@ loop:
 	return exitError
 ```
 
-### Apply the Event/Hostname Addition
+### 5). Apply the Event/Hostname Addition
 
 The `applyEvent` method - located in the same file `hostname_operator.go` file as the `run` function - matches the event type (I.e. `ProviderResourceAdd`).  The event type was set prior via the `ObserveHostnameState` method.\
 \
-Following the path of a new `providerhost` resource add as an example - the matched event is then passed to the `applyAddOrUpdateEvent` method.
+Following the path of a new `providerhost` resource add as an example the matched event is then passed to the `applyAddOrUpdateEvent` method.
 
 ```
 func (op *hostnameOperator) applyEvent(ctx context.Context, ev ctypes.HostnameResourceEvent) error {
@@ -157,5 +159,87 @@ func (op *hostnameOperator) applyEvent(ctx context.Context, ev ctypes.HostnameRe
 		err := op.applyAddOrUpdateEvent(ctx, ev)
 	...
 
+}
+```
+
+### 6). Determine if New Ingres Controller Entry is Necessary
+
+A check is conducted to determine if the hostname already exists in the hostname map of the `hostnameOperator (op)` struct.  If such an entry is not found in the map it is deemed a new ingress controller entry is necessary.
+
+The ingress controller entry for the event is then made via the `ConnectHostnameToDeployment` method.
+
+```
+func (op *hostnameOperator) applyAddOrUpdateEvent(ctx context.Context, ev ctypes.HostnameResourceEvent) error {
+	selectedExpose, err := locateServiceFromManifest(ctx, op.client, ev.GetLeaseID(), ev.GetServiceName(), ev.GetExternalPort())
+	if err != nil {
+		return err
+	}
+
+	leaseID := ev.GetLeaseID()
+
+	op.log.Debug("connecting",
+		"hostname", ev.GetHostname(),
+		"lease", leaseID,
+		"service", ev.GetServiceName(),
+		"externalPort", ev.GetExternalPort())
+	entry, exists := op.hostnames[ev.GetHostname()]
+	....
+	if isSameLease {
+		shouldConnect := false
+
+		if !exists {
+			shouldConnect = true
+			op.log.Debug("hostname target is new, applying")
+			// Check to see if port or service name is different
+		}
+		....
+		if shouldConnect {
+			op.log.Debug("Updating ingress")
+			// Update or create the existing ingress
+			err = op.client.ConnectHostnameToDeployment(ctx, directive)
+		}
+		....
+}
+```
+
+### 7). Apply New Ingress Controller Rule
+
+```
+func (c *client) ConnectHostnameToDeployment(ctx context.Context, directive ctypes.ConnectHostnameToDeploymentDirective) error {
+	ingressName := directive.Hostname
+	ns := builder.LidNS(directive.LeaseID)
+	rules := ingressRules(directive.Hostname, directive.ServiceName, directive.ServicePort)
+
+	foundEntry, err := c.kc.NetworkingV1().Ingresses(ns).Get(ctx, ingressName, metav1.GetOptions{})
+	metricsutils.IncCounterVecWithLabelValuesFiltered(kubeCallsCounter, "ingresses-get", err, kubeErrors.IsNotFound)
+
+	labels := make(map[string]string)
+	labels[builder.AkashManagedLabelName] = "true"
+	builder.AppendLeaseLabels(directive.LeaseID, labels)
+
+	ingressClassName := akashIngressClassName
+	obj := &netv1.Ingress{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:        ingressName,
+			Labels:      labels,
+			Annotations: kubeNginxIngressAnnotations(directive),
+		},
+		Spec: netv1.IngressSpec{
+			IngressClassName: &ingressClassName,
+			Rules:            rules,
+		},
+	}
+
+	switch {
+	case err == nil:
+		obj.ResourceVersion = foundEntry.ResourceVersion
+		_, err = c.kc.NetworkingV1().Ingresses(ns).Update(ctx, obj, metav1.UpdateOptions{})
+		metricsutils.IncCounterVecWithLabelValues(kubeCallsCounter, "networking-ingresses-update", err)
+	case kubeErrors.IsNotFound(err):
+		_, err = c.kc.NetworkingV1().Ingresses(ns).Create(ctx, obj, metav1.CreateOptions{})
+		metricsutils.IncCounterVecWithLabelValues(kubeCallsCounter, "networking-ingresses-create", err)
+	}
+
+	return err
 }
 ```

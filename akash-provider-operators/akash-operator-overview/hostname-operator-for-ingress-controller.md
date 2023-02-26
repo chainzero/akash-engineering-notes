@@ -6,13 +6,13 @@ Not yet completed
 
 ## Pre-Requisites
 
-A basic understanding of Kubernetes Custom Operator building and code structure is necessary to fully understand the concepts covered in our review of the Akash Provider's Hostname Operator.  Suggested reviews of Kubernetes Custom Operators are provided in the [Akash Operator Overview](../) section.
+A basic understanding of Kubernetes Custom Operator building and code structure is necessary to fully understand the concepts covered in our review of the Akash Provider's Hostname Operator.  Suggested reviews of Kubernetes Custom Operators are provided in the [Akash Operator Overview](./) section.
 
 ## Visualization
 
 > Use the visualization coupled with the Code Review section for correlated code deep dive
 
-<figure><img src="../../../.gitbook/assets/akashHostnameOperator.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/akashHostnameOperator.png" alt=""><figcaption></figcaption></figure>
 
 ## Code Review
 
@@ -111,7 +111,7 @@ As the implementation details of the Hostname Operator custom controller is a ra
 
 ### Hostname Controller  - Visual High Level Representation
 
-<figure><img src="../../../.gitbook/assets/akashHostnameOperatorController.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/akashHostnameOperatorController.png" alt=""><figcaption></figcaption></figure>
 
 ### Hostname Controller - Deep Dive
 
