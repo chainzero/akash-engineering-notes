@@ -14,3 +14,5 @@
       * [Hostname Controller Deep Dive](akash-provider-operators/akash-operator-overview/hostname-operator-for-ingress-controller/hostname-controller-deep-dive.md)
     * [IP Operator for IP Leases](akash-provider-operators/akash-operator-overview/ip-operator-for-ip-leases.md)
     * [Inventory Operator for Persistent Storage](akash-provider-operators/akash-operator-overview/inventory-operator-for-persistent-storage.md)
+* [Akash gRPC](akash-grpc/README.md)
+  * [Akash gRPC Implementation Overview](akash-grpc/akash-grpc-implementation-overview.md)
