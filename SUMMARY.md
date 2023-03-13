@@ -17,4 +17,5 @@
 * [Akash API](akash-grpc/README.md)
   * [Akash gRPC Implementation Overview](akash-grpc/akash-grpc-implementation-overview.md)
   * [Deployments](akash-api/deployments.md)
+  * [Lease](akash-api/lease.md)
   * [Deployments CLI](akash-api/deployments-cli.md)
