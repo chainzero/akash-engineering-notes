@@ -19,3 +19,7 @@
   * [Deployments](akash-api/deployments.md)
   * [Lease](akash-api/lease.md)
   * [Deployments CLI](akash-api/deployments-cli.md)
+* [Table of Contents](table-of-contents/README.md)
+  * [Akash Node Repo Table of Contents](table-of-contents/akash-node-repo-table-of-contents.md)
+  * [Akash Node Directory Glossary](table-of-contents/akash-node-directory-glossary.md)
+* [Akash App (app.go Initiation and Blockchain Definitions)](akash-app-app.go-initiation-and-blockchain-definitions.md)
