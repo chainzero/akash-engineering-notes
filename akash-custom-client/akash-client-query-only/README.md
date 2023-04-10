@@ -1,0 +1,2 @@
+# Akash Client - Query Only
+
