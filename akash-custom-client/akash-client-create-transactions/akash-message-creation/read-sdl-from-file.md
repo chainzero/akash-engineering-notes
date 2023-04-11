@@ -12,9 +12,10 @@ Based on the purpose and utility of the client/integration the SDL may instead b
 
 The locale of the SDL could obviously be updated easily - I.e. use a different subdirectory - easily.
 
-<pre><code>...TRUNCATED...
-<strong>// Start of Msg Create logic
-</strong>// Logic derived from code initiated via: https://github.com/akash-network/node/blob/52d5ee5caa2c6e5a5e59893d903d22fe450d6045/x/deployment/client/cli/tx.go#L83
+```
+...TRUNCATED...
+// Start of Msg Create logic
+// Logic derived from code initiated via: https://github.com/akash-network/node/blob/52d5ee5caa2c6e5a5e59893d903d22fe450d6045/x/deployment/client/cli/tx.go#L83
 
 sdlLocation := ("./testsdl/deploy.yml")
 accountPrefix := "akash"
@@ -24,7 +25,7 @@ if err != nil {
 	fmt.Println(err)
 }
 ...TRUNCATED...
-</code></pre>
+```
 
 ## ReadFile Method - Additional Detail
 
