@@ -53,5 +53,6 @@
   * [Development Environment General Behavior](akash-development-environment/development-environment-general-behavior.md)
   * [Runbook](akash-development-environment/runbook.md)
   * [Parameters](akash-development-environment/parameters.md)
+  * [Parameters2](akash-development-environment/parameters2.md)
   * [Keys](akash-development-environment/keys.md)
   * [Use Runbook](akash-development-environment/use-runbook.md)
