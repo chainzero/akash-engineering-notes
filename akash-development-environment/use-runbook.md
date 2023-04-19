@@ -24,44 +24,31 @@ cd ~/go/src/github.com/akash-network/provider/_run/kube
 
 > _**NOTE**_ - run this command in this step on terminal1 only
 
+> _**NOTE**_ - this step may take several minutes to complete
+
 ```
 make kube-cluster-setup
 ```
 
-#### Expected/Example Output
+#### Possible Timed Out Waiting for the Condition Error
+
+If the following error is encountered when running `make kube-cluster-setup`:
 
 ```
-MacBook-Pro kube % cd ~/go/src/github.com/akash-network/provider/_run/kube
-MacBook-Pro kube %
-MacBook-Pro kube %
-MacBook-Pro kube % make kube-cluster-setup
-make -C /Users/scarruthers/go/src/github.com/akash-network/provider bins
-make[1]: Entering directory '/Users/scarruthers/go/src/github.com/akash-network/provider'
-creating .cache dir structure...
-mkdir -p /Users/scarruthers/go/src/github.com/akash-network/provider/.cache
-mkdir -p /Users/scarruthers/go/src/github.com/akash-network/provider/.cache/bin
-mkdir -p /Users/scarruthers/go/src/github.com/akash-network/provider/.cache/include
-mkdir -p /Users/scarruthers/go/src/github.com/akash-network/provider/.cache/versions
-mkdir -p /Users/scarruthers/go/src/github.com/akash-network/provider/.cache
-mkdir -p /Users/scarruthers/go/src/github.com/akash-network/provider/.cache/tests
-mkdir -p /Users/scarruthers/go/src/github.com/akash-network/provider/.cache/run
-installing modvendor v0.3.0 ...
-rm -f /Users/scarruthers/go/src/github.com/akash-network/provider/.cache/bin/modvendor
-GOBIN=/Users/scarruthers/go/src/github.com/akash-network/provider/.cache/bin GO111MODULE=on go install github.com/goware/modvendor@v0.3.0
-go: downloading github.com/goware/modvendor v0.3.0
-go: downloading github.com/mattn/go-zglob v0.0.2-0.20191112051448-a8912a37f9e7
-rm -rf "/Users/scarruthers/go/src/github.com/akash-network/provider/.cache/versions/modvendor/"
-mkdir -p "/Users/scarruthers/go/src/github.com/akash-network/provider/.cache/versions/modvendor/"
-touch /Users/scarruthers/go/src/github.com/akash-network/provider/.cache/versions/modvendor/v0.3.0
-GO111MODULE=on go mod tidy
-go: downloading github.com/boz/go-lifecycle v0.1.1-0.20190620234137-5139c86739b8
-go: downloading github.com/cosmos/cosmos-sdk v0.45.15
-go: downloading github.com/akash-network/akash-api v0.0.11
-go: downloading github.com/akash-network/node v0.23.0-rc7
-go: downloading github.com/akash-network/cometbft v0.34.27-akash
-go: downloading k8s.io/client-go v0.26.1
-go: downloading k8s.io/api v0.26.1
-<OUTPUT TRUNCATED>
+Waiting for deployment "ingress-nginx-controller" rollout to finish: 0 out of 1 new replicas have been updated...
+Waiting for deployment "ingress-nginx-controller" rollout to finish: 0 of 1 updated replicas are available...
+error: timed out waiting for the condition
+make: *** [../common-kube.mk:120: kube-setup-ingress-default] Error 1
+```
+
+This is an indication that the Kubernetes ingress-controller did not initialize within the default timeout period.  In such cases, re-execute `make kube-cluster-setup` with a custom timeout period such as the example below.  This step is NOT necessary if `make kube-cluster-setup` completed on first run with no errors encountered.
+
+```
+cd provider/_run/<kube|single|ssh>
+make kube-cluster-delete
+make clean
+make init
+KUBE_ROLLOUT_TIMEOUT=500 make kube-cluster-setup
 ```
 
 ### STEP 3 - Start Akash Node
@@ -72,7 +59,7 @@ go: downloading k8s.io/api v0.26.1
 make node-run
 ```
 
-### STEP 4 - Create a Provider
+### STEP 4 - Create an Akash Provider
 
 > _**NOTE**_ - run this command in this step on terminal1 only
 
@@ -80,7 +67,27 @@ make node-run
 make provider-create
 ```
 
-### STEP 5 - Create and Verify Test Deployment
+#### Note on Keys
+
+Each configuration creates four keys: The keys are assigned to the targets and under normal circumstances there is no need to alter it. However, it can be done with setting KEY\_NAME:
+
+```
+# create provider from **provider** key
+make provider-create
+
+# create provider from custom key
+KEY_NAME=other make provider-create
+```
+
+### STEP 5 - Start the Akash Provider
+
+> _**NOTE**_ - run this command in this step on terminal3 only
+
+```
+make provider-run
+```
+
+### STEP 6 - Create and Verify Test Deployment
 
 > _**NOTE**_ - run the commands in this step on terminal1 only
 
@@ -114,7 +121,7 @@ make query-orders
 make query-bids
 ```
 
-### STEP 6 - Test Lease Creation for the Test Deployment
+### STEP 7 - Test Lease Creation for the Test Deployment
 
 > _**NOTE**_ - run the commands in this step on terminal1 only
 
@@ -138,7 +145,7 @@ make query-leases
 make provider-status
 ```
 
-### STEP 7 - Send Manifest
+### STEP 8 - Send Manifest
 
 > _**NOTE**_ - run the commands in this step on terminal1 only
 
@@ -160,7 +167,7 @@ make provider-lease-status
  make provider-lease-ping
 ```
 
-### STEP 8 - Verify Service Status
+### STEP 9 - Verify Service Status
 
 > _**NOTE**_ - run the commands in this step on terminal1 only
 

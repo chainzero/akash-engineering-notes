@@ -17,4 +17,5 @@ If at any point something goes wrong and cluster needs to be run from the beginn
 cd provider/_run/<kube|single|ssh>
 make kube-cluster-delete
 make clean
+make init
 ```

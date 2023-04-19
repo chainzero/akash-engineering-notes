@@ -7,6 +7,5 @@ Follow these sequential steps to build a local Akash development environment.
 * [Install Tools](install-tools.md)
 * [Development Environment General Behavior](./)
 * [Runbook](runbook.md)
-* [Parameters](parameters.md)
-* [Keys](keys.md)
+* [Parameters](broken-reference)
 * [Use Runbook](use-runbook.md)
