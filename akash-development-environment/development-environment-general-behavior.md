@@ -1,6 +1,6 @@
 # Development Environment General Behavior
 
-All examples are located within [\_run](https://github.com/akash-network/provider/blob/gpu/\_run) directory. Commands are implemented as `make` targets.
+All examples are located within [\_run](https://github.com/akash-network/provider/tree/main/\_run) directory. Commands are implemented as `make` targets.
 
 There are three ways we use to set up the Kubernetes cluster.
 

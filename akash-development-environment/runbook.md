@@ -1,6 +1,6 @@
 # Runbook
 
-There are four configuration variants, each presented as directory within [\_run](https://github.com/akash-network/provider/blob/gpu/\_run).
+There are four configuration variants, each presented as directory within[ \_run](https://github.com/akash-network/provider/tree/main/\_run).
 
 * `kube` - uses `kind` to set up local cluster. It is widely used by e2e testing of the provider. Provider and the node run as host services. All operators run as kubernetes deployments.
 * `single` - uses `kind` to set up local cluster. Main difference is both node and provider (and all operators) are running within k8s cluster as deployments. (at some point we will merge `single` with `kube` and call it `kind`)
