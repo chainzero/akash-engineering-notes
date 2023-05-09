@@ -54,3 +54,7 @@
   * [Runbook](akash-development-environment/runbook.md)
   * [Parameters](akash-development-environment/parameters.md)
   * [Use Runbook](akash-development-environment/use-runbook.md)
+* [Akash Code Contributors - Policies and Standards](akash-code-contributors-policies-and-standards/README.md)
+  * [Getting Started with Akash Contributions](akash-code-contributors-policies-and-standards/getting-started-with-akash-contributions.md)
+  * [Code Conventions](akash-code-contributors-policies-and-standards/code-conventions.md)
+  * [Contributor Cheatsheet](akash-code-contributors-policies-and-standards/contributor-cheatsheet.md)
