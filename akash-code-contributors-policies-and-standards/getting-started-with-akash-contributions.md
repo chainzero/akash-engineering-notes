@@ -23,9 +23,17 @@ All Akash documentation - both the Akash user guides and engineering docs - are 
 
 ### Review and Isolate a Good First Topic
 
-There are multiple repositories within the Akash code base. Each repository has beginner-friendly issues that are a great place to get started on your contributor journey.  All issues across these repositories are collapsed within the [Support repository and associated issues](https://github.com/akash-network/support/issues) within that repo.
+There are multiple repositories within the Akash code base. Each repository has beginner-friendly issues that are a great place to get started on your contributor journey. &#x20;
 
-The core Akash team labels issues as  `good first issue` for focuses that don’t need deep Akash knowledge to contribute to. The `good first issue` label also indicates that the Akssh core team have committed to providing extra assistance for new contributors in these focuses.&#x20;
+The core Akash team labels issues as  `good first issue` for focuses that don’t need deep Akash knowledge to contribute to. The `good first issue` label also indicates that the Akssh core team have committed to providing extra assistance for new contributors in these focuses.   Additionally the tag of `ready-for-community-dev` earmarks issues ripe for contribution.
+
+#### Akash Node And Provider Repositories
+
+All issues across these repositories are collapsed within the [Support repository and associated issues](https://github.com/akash-network/support/issues) within that repo.
+
+#### Akash Console Repositories
+
+All issues created for Akash Console are listed and tracked within the associated repository.  Directly access Akash Console issues [here](https://github.com/akash-network/console/issues).
 
 ### Become Involved in Akash SIGs
 
