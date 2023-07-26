@@ -2,7 +2,7 @@
 
 Follow these sequential steps to build a local Akash development environment.
 
-* [Overview](../akash-custom-client/akash-client-create-transactions/overview.md)
+* [Overview](../akash-custom-client-1/akash-client-create-transactions/overview.md)
 * [Code](code.md)
 * [Install Tools](install-tools.md)
 * [Development Environment General Behavior](./)

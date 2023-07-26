@@ -1,13 +1,6 @@
 # Akash Node Repo Table of Contents
 
-| Directory | Brief Description                                          | Prominent SubDirectories/Files | Available Docs                                                      |
-| --------- | ---------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------- |
-| app       | Cosmos SDK module registration and store definitions       | app.go                         | [Akash App](akash-node-repo-table-of-contents.md#akash-app)         |
-| cmd       | Cobra registration of `akash` root/sub-commands and flags. | <p><br></p>                    |                                                                     |
-| proto     | Akash API definitions via protobuf                         |                                | [Akash API](akash-node-repo-table-of-contents.md#akash-api)         |
-| sdkutil   | Holds utilities such as  function BroadcastTX              |                                |                                                                     |
-| types     | Types derived from protobuf's Go client (protoc)           | node/types/v1beta2/            |                                                                     |
-| x         | Cosmos SDK Modules                                         |                                | [Akash Modules](akash-node-repo-table-of-contents.md#akash-modules) |
+<table><thead><tr><th width="119">Directory</th><th width="214">Brief Description</th><th width="238">Prominent SubDirectories/Files</th><th>Available Docs</th></tr></thead><tbody><tr><td>app</td><td>Cosmos SDK module registration and store definitions</td><td>app.go</td><td><a href="akash-node-repo-table-of-contents.md#akash-app">Akash App</a></td></tr><tr><td>cmd</td><td>Cobra registration of <code>akash</code> root/sub-commands and flags.</td><td><br></td><td></td></tr><tr><td>proto</td><td>Akash API definitions via protobuf</td><td></td><td><a href="akash-node-repo-table-of-contents.md#akash-api">Akash API</a></td></tr><tr><td>sdkutil</td><td>Holds utilities such as  function BroadcastTX</td><td></td><td></td></tr><tr><td>types</td><td>Types derived from protobuf's Go client (protoc)</td><td>node/types/v1beta2/</td><td></td></tr><tr><td>x</td><td>Cosmos SDK Modules</td><td></td><td><a href="akash-node-repo-table-of-contents.md#akash-modules">Akash Modules</a></td></tr></tbody></table>
 
 ##
 
