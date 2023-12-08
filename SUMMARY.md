@@ -60,3 +60,4 @@
   * [Contributor Cheatsheet](akash-code-contributors-policies-and-standards/contributor-cheatsheet.md)
 * [Akash API](akash-api/README.md)
   * [Exploration of Akash Queries Using the Akash API Source Code](akash-api/exploration-of-akash-queries-using-the-akash-api-source-code.md)
+* [Akash End to End Testing (Provider)](akash-end-to-end-testing-provider.md)
