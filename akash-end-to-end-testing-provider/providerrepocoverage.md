@@ -22,7 +22,18 @@
 
 ### Test Coverage
 
-<table><thead><tr><th>Focus Area</th><th width="179">Success/Failure Test</th><th>Test Specs</th><th data-type="checkbox">Current E2E Coverage</th></tr></thead><tbody><tr><td><em><strong>Persistent Storage</strong></em></td><td></td><td></td><td>false</td></tr><tr><td></td><td><em><strong>Success</strong></em></td><td></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH BETA2 STORAGE TYPE</a></td><td>false</td></tr><tr><td></td><td></td><td>SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH NO STORAGE TYPE DEFINED</td><td>true</td></tr><tr><td></td><td><em><strong>Failure</strong></em></td><td></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH NO MOUNT SPECIFIED</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO ABSOLUTE MOUNT PATH</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON INVALID NAME</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON ATTEMPT TO USE MOUNT PATH TWICE</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO SERVICE CONFIG</a></td><td>false</td></tr></tbody></table>
+| Success/Failure Test | Test Specs                                                                                            | Current E2E Test Coverage |
+| -------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------- |
+|                      |                                                                                                       |                           |
+| _**Success**_        |                                                                                                       |                           |
+|                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH BETA2 STORAGE TYPE](broken-reference)                 | \[] Coverage              |
+|                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH NO STORAGE TYPE DEFINED](broken-reference)            | \[X] Coverage             |
+| _**Failure**_        |                                                                                                       |                           |
+|                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH NO MOUNT SPECIFIED](broken-reference)                 | \[] Coverage              |
+|                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO ABSOLUTE MOUNT PATH](broken-reference)          | \[] Coverage              |
+|                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON INVALID NAME](broken-reference)                    | \[] Coverage              |
+|                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON ATTEMPT TO USE MOUNT PATH TWICE](broken-reference) | \[] Coverage              |
+|                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO SERVICE CONFIG](broken-reference)               | \[] Coverage              |
 
 #### Expected Success
 
@@ -87,16 +98,15 @@
 
 ### Test Coverage
 
-| Focus Area      | Success/Failure Test | Test Specs                                                                                            |
-| --------------- | -------------------- | ----------------------------------------------------------------------------------------------------- |
-| _**IP Leases**_ |                      |                                                                                                       |
-|                 | _**Success**_        |                                                                                                       |
-|                 |                      | [SIMPLE IP LEASES CREATION AND ASSIGNMENT](broken-reference)                                          |
-|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) |
-|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - SINGLE PLACEMENT GROUP](broken-reference)    |
-|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) |
-|                 |                      | [SINGLE IP LEASE CREATION AND WITH MULTIPLE SERVICES ASSIGNMENT](broken-reference)                    |
-|                 |                      |                                                                                                       |
+| Focus Area      | Success/Failure Test | Test Specs                                                                                            | Current E2E Test Coverage |
+| --------------- | -------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------- |
+| _**IP Leases**_ |                      |                                                                                                       |                           |
+|                 | _**Success**_        |                                                                                                       |                           |
+|                 |                      | [SIMPLE IP LEASES CREATION AND ASSIGNMENT](broken-reference)                                          | \[X] Coverage             |
+|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) | \[] Coverage              |
+|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - SINGLE PLACEMENT GROUP](broken-reference)    | \[] Coverage              |
+|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) | \[] Coverage              |
+|                 |                      | [SINGLE IP LEASE CREATION AND WITH MULTIPLE SERVICES ASSIGNMENT](broken-reference)                    | \[] Coverage              |
 
 #### Expected Success
 
