@@ -22,17 +22,7 @@
 
 ### Test Coverage
 
-| Focus Area               | Success/Failure Test | Test Specs                                                                                            |
-| ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------- |
-| _**Persistent Storage**_ |                      |                                                                                                       |
-|                          | _**Success**_        |                                                                                                       |
-|                          |                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH BETA2 STORAGE TYPE](broken-reference)                 |
-|                          | _**Failure**_        |                                                                                                       |
-|                          |                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH NO MOUNT SPECIFIED](broken-reference)                 |
-|                          |                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO ABSOLUTE MOUNT PATH](broken-reference)          |
-|                          |                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON INVALID NAME](broken-reference)                    |
-|                          |                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON ATTEMPT TO USE MOUNT PATH TWICE](broken-reference) |
-|                          |                      | [SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO SERVICE CONFIG](broken-reference)               |
+<table><thead><tr><th>Focus Area</th><th width="179">Success/Failure Test</th><th>Test Specs</th><th data-type="checkbox">Current E2E Coverage</th></tr></thead><tbody><tr><td><em><strong>Persistent Storage</strong></em></td><td></td><td></td><td>false</td></tr><tr><td></td><td><em><strong>Success</strong></em></td><td></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH BETA2 STORAGE TYPE</a></td><td>false</td></tr><tr><td></td><td></td><td>SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH NO STORAGE TYPE DEFINED</td><td>true</td></tr><tr><td></td><td><em><strong>Failure</strong></em></td><td></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST WITH NO MOUNT SPECIFIED</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO ABSOLUTE MOUNT PATH</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON INVALID NAME</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON ATTEMPT TO USE MOUNT PATH TWICE</a></td><td>false</td></tr><tr><td></td><td></td><td><a href="broken-reference">SIMPLE PERSISTENT STORAGE DEPLOYMENT TEST FAIL ON NO SERVICE CONFIG</a></td><td>false</td></tr></tbody></table>
 
 #### Expected Success
 
