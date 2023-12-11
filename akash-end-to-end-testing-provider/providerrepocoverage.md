@@ -98,15 +98,15 @@
 
 ### Test Coverage
 
-| Focus Area      | Success/Failure Test | Test Specs                                                                                            | Current E2E Test Coverage |
-| --------------- | -------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------- |
-| _**IP Leases**_ |                      |                                                                                                       |                           |
-|                 | _**Success**_        |                                                                                                       |                           |
-|                 |                      | [SIMPLE IP LEASES CREATION AND ASSIGNMENT](broken-reference)                                          | \[X] Coverage             |
-|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) | \[] Coverage              |
-|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - SINGLE PLACEMENT GROUP](broken-reference)    | \[] Coverage              |
-|                 |                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) | \[] Coverage              |
-|                 |                      | [SINGLE IP LEASE CREATION AND WITH MULTIPLE SERVICES ASSIGNMENT](broken-reference)                    | \[] Coverage              |
+| Success/Failure Test | Test Specs                                                                                            | Current E2E Test Coverage |
+| -------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------- |
+|                      |                                                                                                       |                           |
+| _**Success**_        |                                                                                                       |                           |
+|                      | [SIMPLE IP LEASES CREATION AND ASSIGNMENT](broken-reference)                                          | \[X] Coverage             |
+|                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) | \[] Coverage              |
+|                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - SINGLE PLACEMENT GROUP](broken-reference)    | \[] Coverage              |
+|                      | [MULTIPLE AND UNIQUE IP LEASES CREATION AND ASSIGNMENT - MULTIPLE PLACEMENT GROUPS](broken-reference) | \[] Coverage              |
+|                      | [SINGLE IP LEASE CREATION AND WITH MULTIPLE SERVICES ASSIGNMENT](broken-reference)                    | \[] Coverage              |
 
 #### Expected Success
 
