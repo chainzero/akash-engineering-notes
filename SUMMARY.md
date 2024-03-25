@@ -63,3 +63,4 @@
 * [Akash End to End Testing (Provider)](akash-end-to-end-testing-provider.md)
   * [providerRepoCoverage](akash-end-to-end-testing-provider/providerrepocoverage.md)
 * [Import](import.md)
+* [Akash Blockchain Build](akash-blockchain-build.md)
